@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BuC-DZ-70o">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pwf-cA-KCE">
+            <objects>
+                <navigationController id="BuC-DZ-70o" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ciL-o0-JuD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vpd-5d-ola"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cu6-3h-t9D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-857" y="-27"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="mainController" customModule="Quizlet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pink" translatesAutoresizingMaskIntoConstraints="NO" id="DPE-Uf-nbx">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oV6-C7-JjQ">
+                                <rect key="frame" x="115" y="103" width="163" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOT-Vp-3So">
+                                <rect key="frame" x="50" y="189" width="293" height="349"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LoJ-9q-Buw">
+                                <rect key="frame" x="80" y="779" width="233" height="4"/>
+                            </progressView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VJ0-4n-wTx">
+                                <rect key="frame" x="40" y="575" width="313" height="154"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u98-Rv-sya">
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Choice 1" titleAlignment="leading">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choice1ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o8E-Uk-IFq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87e-XL-Six">
+                                        <rect key="frame" x="0.0" y="58" width="313" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Choice 2" titleAlignment="leading">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choice2ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvR-Sq-57q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z7-xW-qk9">
+                                        <rect key="frame" x="0.0" y="116" width="313" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Choice 3" titleAlignment="leading">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choice3ActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THl-yx-9mJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VJ0-4n-wTx" secondAttribute="trailing" constant="40" id="2vn-pm-P2j"/>
+                            <constraint firstItem="DPE-Uf-nbx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5yU-KG-6g5"/>
+                            <constraint firstItem="oV6-C7-JjQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6TI-YF-chR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zOT-Vp-3So" secondAttribute="bottom" constant="280" id="6jb-f7-ia3"/>
+                            <constraint firstItem="zOT-Vp-3So" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="CHK-e3-WRp"/>
+                            <constraint firstItem="zOT-Vp-3So" firstAttribute="top" secondItem="oV6-C7-JjQ" secondAttribute="bottom" constant="50" id="Fod-ig-UWR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LoJ-9q-Buw" secondAttribute="bottom" constant="35" id="JMd-TQ-uty"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LoJ-9q-Buw" secondAttribute="trailing" constant="80" id="KLq-cp-Eii"/>
+                            <constraint firstItem="VJ0-4n-wTx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="MMa-yZ-tBW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oV6-C7-JjQ" secondAttribute="trailing" constant="115" id="P3P-y7-hut"/>
+                            <constraint firstItem="LoJ-9q-Buw" firstAttribute="top" secondItem="VJ0-4n-wTx" secondAttribute="bottom" constant="50" id="U1x-n9-oWB"/>
+                            <constraint firstItem="DPE-Uf-nbx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zdr-zk-kC4"/>
+                            <constraint firstItem="LoJ-9q-Buw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="bxh-8n-LHw"/>
+                            <constraint firstItem="DPE-Uf-nbx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lpE-hk-3v8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zOT-Vp-3So" secondAttribute="trailing" constant="50" id="nrt-eb-W7E"/>
+                            <constraint firstItem="oV6-C7-JjQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="v2u-C3-Qnu"/>
+                            <constraint firstAttribute="bottom" secondItem="DPE-Uf-nbx" secondAttribute="bottom" id="yIt-ac-hzp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zfC-oB-tUM"/>
+                    <connections>
+                        <outlet property="choice1Label" destination="u98-Rv-sya" id="tlb-SU-LfV"/>
+                        <outlet property="choice2Label" destination="87e-XL-Six" id="UGi-1d-hDg"/>
+                        <outlet property="choice3Label" destination="2Z7-xW-qk9" id="Fkg-MK-5d8"/>
+                        <outlet property="progressViewLabel" destination="LoJ-9q-Buw" id="AqZ-Qx-wsE"/>
+                        <outlet property="questionLabel" destination="zOT-Vp-3So" id="mNy-PW-xkj"/>
+                        <outlet property="scoreLabel" destination="oV6-C7-JjQ" id="Vbl-14-3fr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pink" width="3334" height="5000"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
